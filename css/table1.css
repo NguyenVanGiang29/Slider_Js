@@ -1,0 +1,372 @@
+:root {
+    --graywhite-color: rgb(201, 200, 200);
+    --gray-color: rgb(218, 218, 218);
+}  
+
+body {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.col {
+    width: 310px;
+}
+
+.row1 {
+    background-color: antiquewhite;
+    padding: 80px 0px 20px 25px;
+    position: relative;
+}
+
+.row2 {
+    border: 1px rgb(184, 182, 182) solid;
+    border-top: none;
+}
+
+.title1 {
+    color: white;
+    font-family: Monospace;
+}
+
+.title2 {
+    color: white;
+    font-family: Sans-serif;
+    font-weight: lighter;
+}
+
+.subtitle1 {
+    font-size: 20px;
+    color: gray;
+    padding: 30px 0px 0px 25px;
+    margin: 0px;
+}
+
+.subtitle2 {
+    padding: 0px 0px 10px 25px;
+    font-size: 10px;
+    color: rgb(158, 156, 156);
+    font-weight: bold;
+}
+
+.optiongray {
+    background-color: var(--gray-color);
+    padding: 10px 0px 10px 0px;
+    margin: 0px;
+}
+
+.optionwhite {
+    padding: 10px 0px 10px 0px;
+    margin: 0px;
+    background-color: white;
+}
+
+.buttonorder {
+    margin: 30px 0px 20px 25px;
+    border-radius: 20px;
+    height: 35px;
+    width: 100px;
+    background-color: rgb(204, 199, 199);
+    text-align: center;
+    transition-duration: 0.4s;
+    color: white;
+    border: none;
+    font-family: Sans-serif;
+}
+
+.buttonorder:hover {
+    background-color: black;
+    color: white;
+}
+
+.desc {
+    color: white;
+    font-size: 10px;
+}
+
+#row2-center {
+    border-right: none;
+}
+
+.price {
+    background-color: rgb(21, 26, 90);
+    height: 69px;
+    width: 69px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -35px;
+    left: 30px;
+    flex-direction: column;
+}
+
+.money {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.subprice {
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+    .col {
+        padding: 40px 0px 0px 0px;
+    }
+    .row2 {
+        border: none;
+        background-color: rgb(240, 240, 240);
+    }
+    .optionwhite {
+        background-color: rgb(240, 240, 240);
+    }
+}
+
+/* tablet */
+
+@media only screen and (min-width: 601px) and (max-width: 1150px) {
+    .container {
+        margin-left: 70px;  
+    }
+    .col {
+        padding: 40px 0px 0px 0px;
+    }
+    .row2 {
+        background-color: rgb(240, 240, 240);
+    }
+    .optionwhite {
+        background-color: rgb(240, 240, 240);
+    }
+    #row2-center{
+        border-right: 1px rgb(126, 121, 121) solid;
+    }
+}
+
+/* slide */
+/* .carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+    height: 500px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.manual-btn {
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: black;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 475px;
+}
+
+.navigation-auto div {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background:rgb(218, 31, 31);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background:rgb(236, 47, 47);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background:rgb(230, 32, 32);
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background:rgb(207, 9, 9);
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background:rgb(190, 46, 46);
+} */
+
+.slider {
+    width: 800px;
+    border: 10px solid black;
+    margin: 50px auto;
+    position: relative;
+}
+
+.slider .slider-item .item img {
+    width: 800px;
+    height: 500px;
+    display: block;
+}
+
+.slider .slider-item .item {
+    display: none;
+    position: relative;
+}
+
+.slider .slider-item .item.active {
+    display: block;
+} 
+
+.slider .slider-item .item .caption {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.slider .left-slide , .slider .right-slide {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #444444;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 45px;
+    top: 50%;
+    margin-top: -20px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.slider .left-slide:hover , .slider .right-slide:hover {
+    background-color: black;
+}
+
+
+.slider .left-slide {
+    left: 10px;
+}
+
+.slider .right-slide {
+    right: 10px;
+}
+
+.navigation-manual {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    top: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.manual-btn {
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 23px;
+}
+
+.manual-btn:hover {
+    background: black;
+}
+
+.manual-btn.active {
+    background: black;
+}
+
